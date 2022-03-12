@@ -1,23 +1,1 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
-
-describe('workspace-project App', () => {
-  let page: AppPage;
-
-  beforeEach(() => {
-    page = new AppPage();
-  });
-
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('CarDB app is running!');
-  });
-
-  afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
-  });
-});
+ÔLýœš?^jþÑÚßçÄüÿOÌ/ý‡zIƒ·æ]výöš«œU.`3B·‡ÃÝclZeÙÓBMW>ø*]ãœ6òµ”ìø0Á~±)†Ion¿ì:ü®âêQfb!²¦ëõNV`Fý{)ÆGd—¥|˜é3Oa>ª9U&¼Ò˜&5Ø/G”Œ¥>×¬à{¯)÷ù¬Ûð+’cvT}’¾jq³È{£LnwQÜ|Å‹—þ‚r‹ÏÚm¥ÆªØgEý£û²ÈH™zdáÇE±„|ï|LßÉº£ýÄõf-_î˜õE&_† Ã>Vá:XnÁ2¯úW®…®ã;þ\üÍÌ«—£D¨—ßÈW×éæèëxª¶qxkÞü¤³}'Ò_(ùŽaKž‰¨6ï¡<çVôL$×¬Á!˜¥O]æ²L»—)QfhSÌÀ§^ônÅÂ¯Šs@·¸¨­,¦À¶ÖI©ÖÃ{ú¤&Ñ%\9ùãùÉ	M9¹ÊÅë/„¢¸µÅ]u¸$³K¼å´ç»"XÊÏëo&Öâ&þ9Tt6y&¢¦ôÂy(ºðØh•C¼c'ÄÝ‚·…~Q¹‹x%™ DÿŒ)S£÷(Â1,ÇGJÅí$ïÞîç®1ë‰y]¯œ;…eÔªN?[ÕËªö*¼_™$åÊKûº®æý”Kí<–qî³èX›í+`ÜKC-íIìí1É“þÏÓ6žþ„õÎ:Ã’q_:+§;ã…¿cÞ½ž´H‡c2+3bì™æ’q˜;ÎJÿuè_ÓÞüÜ.Ý ¼¢xœ­UQoÛ6~÷¯¸e( ¹mwC€"K

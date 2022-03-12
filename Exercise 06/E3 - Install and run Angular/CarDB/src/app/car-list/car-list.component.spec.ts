@@ -1,25 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*
+ * @(#)JLifeFormattedTextArea.java  1.0  2009-04-14
+ * 
+ * Copyright (c) 2009 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ * 
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+ */
+package org.jhotdraw.gui;
 
-import { CarListComponent } from './car-list.component';
-
-describe('CarListComponent', () => {
-  let component: CarListComponent;
-  let fixture: ComponentFixture<CarListComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CarListComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CarListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;

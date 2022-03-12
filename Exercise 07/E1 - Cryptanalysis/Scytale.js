@@ -1,36 +1,25 @@
-let message = "Stensucaioerylstce";
-let length = message.length;
+/**
+ * @(#)PaletteTextComponentBorder.java  1.0  Apr 6, 2008
+ *
+ * Copyright (c) 2008 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+ */
+package org.jhotdraw.gui.plaf.palette;
 
-for (let i = 0; i < length; i++) {
-    // length of each array
-    let key = i + 1;
-    let array = [];
-
-    // number of arrays
-    let arrayCount = Math.ceil(length / key);
-
-    let index = 0;
-    let pointer = key;
-
-    for (let j = 1; j <= arrayCount; j++) {
-        let part = message.slice(index, pointer);
-        array.push(part);
-        index += key;
-        pointer += key;
-    }
-
-    let result = "Key: " + key + " = ";
-
-    // for each symbol
-    for (let j = 0; j <= key; j++) {
-        // in each array
-        for (let k = 0; k < array.length; k++) {
-            let symbol = array[k][j];
-            if (symbol != undefined) {
-                result += symbol;
-            }
-        }
-    }
-
-    console.log(result);
-}
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Insets;
+import java.awt.geom.Point2D;
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.plaf.UIResource;
+import or

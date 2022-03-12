@@ -1,18 +1,32 @@
------BEGIN CERTIFICATE-----
-MIIC8DCCAdigAwIBAgIUF9CdEF2EpV4IsMqyFMz7Mvapk3YwDQYJKoZIhvcNAQEL
-BQAwFDESMBAGA1UEAwwJbG9jYWxob3N0MB4XDTIwMTAyNzEyMzIzN1oXDTIwMTEy
-NjEyMzIzN1owFDESMBAGA1UEAwwJbG9jYWxob3N0MIIBIjANBgkqhkiG9w0BAQEF
-AAOCAQ8AMIIBCgKCAQEA5gOHZHKbKet+Bsn/pFKia2bpja9ID60H8q0UJS3akWy8
-a8DXlO12dtNi9TFcYadM2llWTHdn/d1xh6QsyPd1Cex6eFatSdQReqflXePz+Xr9
-JrYb9sqifdDDv/ATo08B5RuDS8D98lBMTmGJ1+VdYvQobIxG/Ewosg+5i8NQp3wL
-8d1zjbq/EWPIs++iEurotc/7A6PuIPUkPoXMZEQB+cdacL6MoD+MXh6axJcAFE53
-O47xfiS3TgoAFPbJYY2Gwgxys12au19TT8b2YAItviHYByI6AmCle9O+bh4n14Y0
-eEXGYvWabO6d4ExrvQGvVu33TQ/BZwJnPzyKK2LmxQIDAQABozowODAUBgNVHREE
-DTALgglsb2NhbGhvc3QwCwYDVR0PBAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMB
-MA0GCSqGSIb3DQEBCwUAA4IBAQBI/NkxWGZ5ID+g7fEhd0Q0Z4MefGyxId4HcngO
-r+7n3ov/2hFsCeVg/g64ptO/munMUYXpI7bVzVlB8XEk8IOcLhKIROUBabuVnhfF
-DPbfkxl5QZvA55s2Y7eQlZ7pJ5kPzhlzLvQ/xKE1VPprp6f5FdFrkkHQ+xbiQwyY
-aYdmutsFO23QhCYGdOZJxlJrg+LX443qK6XzKUnzMAWMnHUdTj6VauSVXVp8xNt4
-YqEk2+g3wFUzxQ7crJjRov5OQCuuS3fcZM64YEYoV2oYSqvLIuo9+cyiGWEUm3TY
-ItZ4y4ZyTZ7tloA8WruS5rvROq+YN9MFPfSzR0VI6nzL18kL
------END CERTIFICATE-----
+/**
+ * @(#)PaletteUtilities.java  1.0  21.05.2008
+ *
+ * Copyright (c) 2008 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+ */
+package org.jhotdraw.gui.plaf.palette;
+
+import java.awt.*;
+import javax.swing.plaf.basic.BasicGraphicsUtils;
+
+/**
+ * PaletteUtilities.
+ *
+ * @author Werner Randelshofer
+ * @version 1.0 21.05.2008 Created.
+ */
+public class PaletteUtilities  extends BasicGraphicsUtils {
+
+    public static final Object beginGraphics(Graphics2D graphics2d) {
+        Object object = graphics2d.getRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING);
+
+        /*
+        AffineTransform tx = graphics2d.getTransform();
+        AffineTransform savedTransform = (Aff

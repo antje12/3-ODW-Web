@@ -1,31 +1,43 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script>
-            window.addEventListener("load", () => {
-                let ws = new WebSocket("ws://localhost:8080/");
-                let input  = document.getElementById("input");
-                let button = document.getElementById("button");
-                
-                ws.onopen  = () => console.log("connected");
-                ws.onclose = e => console.log("disconnected", e.reason);
-                ws.onerror = e => console.log("Something went wrong:", e);
-                ws.onmessage = event => { 
-                    let json = JSON.parse(event.data);
-                    let div  = document.createElement("div");
-                    div.innerHTML = json.msg; //bad idea
-                    document.body.appendChild(div);
-                };
-                button.addEventListener("click", () => {
-                    ws.send(input.value);
-                    input.value = "";
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <input type="text" id="input">
-        <button id="button">Send</button>
-        <hr>
-    </body>
-</html>
+/*
+ * @(#)LinkHandle.java  1.0  2009-04-16
+ *
+ * Copyright (c) 2009 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and
+ * contributors of the JHotDraw project ("the copyright holders").
+ * You may not use, copy or modify this software, except in
+ * accordance with the license agreement you entered into with
+ * the copyright holders. For details see accompanying license terms.
+ */
+
+package org.jhotdraw.samples.svg.figures;
+
+import org.jhotdraw.draw.*;
+import java.awt.*;
+import java.awt.geom.*;
+import static org.jhotdraw.samples.svg.SVGAttributeKeys.*;
+import org.jhotdraw.util.ResourceBundleUtil;
+
+/**
+ * The LinkHandle indicates when a figure has a link.
+ *
+ * @author Werner Randelshofer
+ * @version 1.0 2009-04-16 Created.
+ */
+public class LinkHandle extends AbstractHandle {
+    
+    /** Creates a new instance. */
+    public LinkHandle(Figure owner) {
+        super(owner);
+    }
+    
+    @Override
+    public boolean contains(Point p) {
+        return false;
+    }
+    
+    /**
+     * Draws this handle.
+     */

@@ -1,0 +1,8 @@
+unit test:
+  image: node:14.15.1-slim
+  stage: test
+  script:
+    - echo '8216560b4960e847260c2999359ae48b43ce0cc0 *package.json' | sha1sum -c
+    - echo '6537b426ffcaae6d8882898338583c3265f15c3d *test.mjs' | sha1sum -c
+    - npm install
+    - npm run test

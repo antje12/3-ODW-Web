@@ -1,41 +1,37 @@
-const http = require('http');
+/*
+ * @(#)SplitPathsAction.java  1.0  2006-07-12
+ *
+ * Copyright (c) 1996-2006 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+ */
 
-let server = http.createServer((req, res) => {
+package org.jhotdraw.samples.svg.action;
 
-    console.log("Request url:", req.url);
-    console.log("Request cookies:", req.headers.cookie);
+import org.jhotdraw.draw.*;
+import org.jhotdraw.draw.action.*;
+import org.jhotdraw.samples.svg.figures.*;
+import org.jhotdraw.undo.*;
+import org.jhotdraw.util.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.undo.*;
 
-    let cookieHeader = req.headers.cookie;
-    let response = "World"
-
-    if (cookieHeader == undefined) {
-        console.log("First visit - Setting cookie");
-        res.writeHead(200, {
-            'Content-Type': 'text/html',
-            //'Access-Control-Allow-Origin': '*',
-            'Set-Cookie': 'MyCookie=abc123'
-        });
-    }
-    else {
-        console.log("Second visit - Cookie already set");
-        res.writeHead(200, {
-            'Content-Type': 'text/html',
-            //'Access-Control-Allow-Origin': '*'
-        });
-        response = "Again";
-    }
-
-    let html = `<html>
-               <head>
-                 <script>
-                   console.log(document.cookie);
-                 </script>
-               </head>
-               <body>
-                 <p>Hello ${response}!</p>
-               </body>
-              </html>`;
-
-    res.end(html);
-});
-server.listen(8080); 
+/**
+ * SplitPathsAction.
+ *
+ * @author  Werner Randelshofer
+ * @version 1.0 2006-07-12 Created.
+ */
+public class SplitAction extends CombineAction {
+    public final static String ID = "edit.splitPath";
+    
+    /** Creates a new instance. */
+    public SplitAction(DrawingEditor editor) {
+        super(edito

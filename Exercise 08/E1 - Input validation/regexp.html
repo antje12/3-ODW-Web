@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8" ?>
 
-<head>
-    <script>
-        function validDate(input) {
-            //FIXME: should return true 
-            //on valid date strings on 
-            //the format dd/mm/yyyy
-            let regex = /^\d{2}\/\d{2}\/\d{4}$/;
-            let result = regex.test(input);
-            return result;
-        }
-        window.addEventListener("load", () => {
-            let dateInput = document.getElementById("date");
-            dateInput.addEventListener("keyup", () => {
-                if (validDate(dateInput.value)) {
-                    dateInput.style.background = "lightgreen";
-                } else {
-                    dateInput.style.background = "red";
-                }
-            });
-        })
-    </script>
-</head>
-
-<body>
-    <p>Please enter a date on the format dd/mm/yyyy:</p>
-    <form>
-        <label for="date">Date:</label>
-        <input type="text" id="date">
-    </form>
-</body>
-
-</html>
+<Form version="1.2" maxVersion="1.2" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,1

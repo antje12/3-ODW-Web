@@ -1,34 +1,34 @@
-/**
- * Code by Ross Johnson
- * Introduction to Load Balancing using Node.js - Part 1
- * https://mazira.com/blog/introduction-load-balancing-nodejs
- */
-let args = process.argv.splice(2);
-let http = require('http');
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
 
-/**
- * This function estimates pi using Monte-Carlo integration
- * https://en.wikipedia.org/wiki/Monte_Carlo_integration
- * @returns {number}
- */
-function estimatePi() {
-    let n = 25000000, inside = 0;
+  @(#)package.html	1.60 98/01/27
 
-    for ( let i = 0; i < n; i++ ) {
-        let x = Math.random();
-        let y = Math.random();
-        if ( Math.sqrt(x * x + y * y) <= 1 )
-            inside++;
-    }
+ * Copyright (c) 1996-2007 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+-->
+</head>
+<body bgcolor="white">
 
-    return 4 * inside / n;
-}
+Provides the figures for the SVG basic shapes.
 
-// Create a basic server that responds to any request with the pi estimation
-let server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.end('Pi: ' + estimatePi());
-});
+<!--
 
-// Listen to a specified port, or default to 8080
-server.listen(args[0] || 8080);
+<h2>Package Specification</h2>
+
+##### FILL IN ANY SPECS NEEDED BY JAVA COMPATIBILITY KIT #####
+<ul>
+  <li><a href="">##### REFER TO ANY FRAMEMAKER SPECIFICATION HERE #####</a>
+</ul>
+
+<h2>Related Documentation</h2>
+
+For overviews, tutorials, examples, guides, and tool documenta

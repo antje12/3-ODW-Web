@@ -1,16 +1,8 @@
-const express = require('express');
-const fs = require('fs')
-const server = express();
+<?xml version="1.0" encoding="UTF-8" ?>
 
-let count = 1;    // the server's state
-const html = fs.readFileSync('clicker-client.html');
-
-server.get('/', (req, res) => {
-    res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
-    res.end(html)
-});
-server.post('/', (req, res) => { 
-    count++;
-    res.json({ count : count });  // return JSON w/updated count
-});
-server.listen(8080);
+<Form version="1.2" maxVersion="1.2">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Bo

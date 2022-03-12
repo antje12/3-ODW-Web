@@ -1,36 +1,27 @@
-// @ts-check
-// Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
-
-const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
-
-/**
- * @type { import("protractor").Config }
+/*
+ * @(#)SheetListener.java  1.0  26. September 2005
+ *
+ * Copyright (c) 1996-2006 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
  */
-exports.config = {
-  allScriptsTimeout: 11000,
-  specs: [
-    './src/**/*.e2e-spec.ts'
-  ],
-  capabilities: {
-    browserName: 'chrome'
-  },
-  directConnect: true,
-  baseUrl: 'http://localhost:4200/',
-  framework: 'jasmine',
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
-    print: function() {}
-  },
-  onPrepare() {
-    require('ts-node').register({
-      project: require('path').join(__dirname, './tsconfig.json')
-    });
-    jasmine.getEnv().addReporter(new SpecReporter({
-      spec: {
-        displayStacktrace: StacktraceOption.PRETTY
-      }
-    }));
-  }
-};
+
+package org.jhotdraw.gui.event;
+
+import java.util.*;
+/**
+ * SheetListener.
+ *
+ * @author  Werner Randelshofer
+ * @version 1.0 26. September 2005 Created.
+ */
+public interface SheetListener extends EventListener {
+    /**
+     * This method is invoked, when the user selected an option on the
+     * JOptionPane or the JFileChooser 

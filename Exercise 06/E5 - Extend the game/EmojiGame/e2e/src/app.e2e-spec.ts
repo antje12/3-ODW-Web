@@ -1,23 +1,21 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+  @(#)package.html	1.60 98/01/27
 
-  beforeEach(() => {
-    page = new AppPage();
-  });
+ * Copyright (c) 1996-2007 by the original authors of JHotDraw
+ * and all its contributors.
+ * All rights reserved.
+ *
+ * The copyright of this software is owned by the authors and  
+ * contributors of the JHotDraw project ("the copyright holders").  
+ * You may not use, copy or modify this software, except in  
+ * accordance with the license agreement you entered into with  
+ * the copyright holders. For details see accompanying license terms. 
+-->
+</head>
+<body bgcolor="white">
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('EmojiGame app is running!');
-  });
-
-  afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
-  });
-});
+Provides general purpose g
