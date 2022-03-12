@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script> 
+
+class MultiplicatorUnitFailure extends Error {}
+
+function primitiveMultiply(a, b) {
+  if (Math.random() < 0.2) {
+    return a * b;
+  } else {
+    throw new MultiplicatorUnitFailure("Klunk");
+  }
+}
+
+function reliableMultiply(a, b) {
+  // Your code here.
+  let done = false;
+  while (!done){
+    try {
+      let result = primitiveMultiply(a, b)
+      done = true;
+      return result;
+  	}
+  	catch (e){
+      if (e instanceof MultiplicatorUnitFailure){
+        console.log(e);
+      }
+      else{
+        throw e;
+      }
+  	}
+  }
+}
+
+console.log(reliableMultiply(8, 8));
+// → 64
+
+</script>
+</head>
+<body>
+For output: See View -> Developer -> JavaScript Console
+</body>
+</html>

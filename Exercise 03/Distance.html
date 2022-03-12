@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script> 
+
+function dist(array){
+    let sum = 0;
+    for(num in array){
+        let tempSum = array[num] * array[num];
+        sum += tempSum;
+    }
+    return Math.sqrt(sum);
+}
+
+console.log(dist([3,4]));
+console.log(dist([1,2,2]));
+console.log(dist([]));
+
+</script>
+</head>
+<body>
+For output: See View -> Developer -> JavaScript Console
+</body>
+</html>

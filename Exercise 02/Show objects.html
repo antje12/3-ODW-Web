@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	.theCar {
+		border-style: solid;
+		border-width: 1px;
+		color: blue;
+	}
+	</style>
+  </head>
+<body>
+
+<h1>Show Objects</h1>
+<p>
+    <b>These are some data about cars:</b>
+</p>
+<div id="cars">...</div>
+
+<script>
+let carArray = 
+    [{ producer: "renault" , model: "clio"},
+     { producer: "renault" , model: "twingo"},
+     { producer: "citroen" , model: "c3"} ];
+     
+console.log(carArray);
+
+/* change the code below to print a div per car, with 2 spans, 
+	one for the producer and one for the model */
+for(i = 0; i < carArray.length; i++){
+    let car = carArray[i];
+    document.getElementById("cars").innerHTML +=
+    "<div class='theCar'>" +
+    "<span>" + car.producer + "</span> " +
+    "<span>" + car.model + "</span> </div>";
+}
+
+
+</script>
+</body>
+</html>

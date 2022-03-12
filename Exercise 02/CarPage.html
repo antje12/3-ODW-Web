@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.theCar {
+		border-style: solid;
+		border-width: 1px;
+		color: blue;
+	}
+	</style>
+<script>
+/* - Create functions to perform the various operations
+     needed in this page. 
+   - Connect these functions with your HTML elements below, to
+     have the browser call your functions when user-generated events happen. */
+
+  // it will hold the data about cars
+  let carArray = [];
+
+  function addCar(){
+    let producer = document.getElementById("producer").value;
+    let model = document.getElementById("model").value;
+
+    carArray.push({ producer: producer , model: model});
+  }
+  
+  function refreshListOfCars(){
+    document.getElementById("listOfCars").innerHTML = "";
+
+    for(i = 0; i < carArray.length; i++){
+      let car = carArray[i];
+      document.getElementById("listOfCars").innerHTML +=
+      "<div class='theCar'>" +
+      "<span>" + car.producer + "</span> " +
+      "<span>" + car.model + "</span> </div>";
+    }
+    
+    document.getElementById("carStatistics").innerHTML =
+      "<div class='theCount'>" +
+      "<span>" + carArray.length + "</span> </div>";
+  }
+
+  console.log(carArray);
+</script>	
+</head>
+<body>
+    <h1>Car Page</h1>
+    <p>
+        <b>Here you can:</b>
+    </p>
+    <ul>
+        <li>add a new car, by typing producer and model name. Use a form with some buttons to do that.</li>
+        <li>refresh the list of existing cars (eventually after you have added a car). Make a button for that.</li>
+        <li>show some statistics (e.g., count) in a DIV somewhere in the page</li>
+    </ul>
+    
+    <hr/>
+    <div>The input form</div>
+    <div>
+      <form action="/action_page.php">
+        <label for="producer">Producer:</label><br>
+        <input type="text" id="producer" name="producer" value=""><br>
+
+        <label for="model">Model:</label><br>
+        <input type="text" id="model" name="model" value=""><br>
+      </form> 
+      <button type="button" onclick="addCar();">Add your car</button>
+      <button type="button" onclick="refreshListOfCars();">Refresh list of cars</button>
+    </div>
+    <hr/>
+    <div id="listOfCars">...</div>
+    <hr/>
+    <div id="carStatistics">...</div>
+    <hr/>
+</body>
+</html>

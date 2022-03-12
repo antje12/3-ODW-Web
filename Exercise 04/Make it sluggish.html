@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The sluggish page</title>
+    </head>
+    <body>
+        <input type="text"> length: <span id="length">0</span>
+        <script>
+        let text = document.querySelector("input");
+        let output = document.querySelector("#length");
+        
+        let newText;
+        let currentText;
+
+        text.addEventListener("input", () => {
+            // SLOW ME            
+            console.log("start");
+
+            // save input but keep old text
+            let newText = text.value;
+            text.value = currentText;
+
+            // wait before updating text
+            let p = new Promise(r => setTimeout(r, 1000));
+            p.then(_ => {   
+                console.log("timer");
+                // update the text
+                text.value = newText;
+                output.innerText = text.value.length;
+                currentText = text.value;
+            });
+            console.log("done");
+        });        
+        </script>
+    </body>
+</html>
